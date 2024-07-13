@@ -22,9 +22,9 @@ const type = computed(() => buttonGroupCtx?.type ?? props.type ?? "");
 const disabled = computed(
   () => props.disabled || buttonGroupCtx?.disabled || false
 );
-const iconStyle = computed(() => ({
-  marginRight: slots.default ? "6px" : "0px",
-}));
+// const iconStyle = computed(() => ({
+//   marginRight: slots.default ? "6px" : "0px",
+// }));
 
 const handleBtnClick = (e: MouseEvent) => {
   emits("click", e);
@@ -61,7 +61,7 @@ defineExpose<ButtonInstance>({
         useThrottle ? handlBtneCLickThrottle(e) : handleBtnClick(e)
     "
   >
-    <template v-if="loading">
+    <!-- <template v-if="loading">
       <slot name="loading">
         <er-icon
           class="loading-icon"
@@ -77,7 +77,7 @@ defineExpose<ButtonInstance>({
       size="1x"
       :style="iconStyle"
       v-if="icon && !loading"
-    />
+    /> -->
     <slot></slot>
   </component>
 </template>
