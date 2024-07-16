@@ -1,4 +1,4 @@
-import "eric-ui/dist/theme/Button.css";
+import "../../theme/index.css";
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
   parameters: {

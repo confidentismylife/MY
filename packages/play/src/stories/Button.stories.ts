@@ -1,7 +1,7 @@
-import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3";
-import { fn, within, userEvent, expect } from "@storybook/test";
-import { ErButton, ErButtonGroup } from "@toy-element/components";
-import "eric-ui/dist/theme/Button.css";
+import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3"; // 导入 Storybook 的类型定义
+import { fn, within, userEvent, expect } from "@storybook/test"; // 导入 Storybook 的测试工具
+import { ErButton, ErButtonGroup } from "@toy-element/components"; // 导入自定义组件
+import "../../../theme/index.css";
 
 type Story = StoryObj<typeof ErButton> & { argTypes?: ArgTypes };
 
@@ -67,6 +67,7 @@ export const Default: Story & { args: { content: string } } = {
   args: {
     type: "primary",
     content: "Button",
+    loading: true
   },
   render: (args) => ({
     components: { ErButton },
